@@ -50,5 +50,5 @@ while i<=len(my_keys)-1:
     price = 0
     for dict in sales[my_art1]:
         price += dict['price']
-    print(f'{my_keys[i]}, {quantity} шт, стоимость {price} руб')
+    print(f'{my_keys[i]} - {quantity} шт, стоимость {price} руб')
     i=i+1
