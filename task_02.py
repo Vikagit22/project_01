@@ -22,3 +22,31 @@ print('Население города',my_cities[1], '-', my_popul[1][1], 'че
 print('Население города',my_popul[1][0], '-', my_popul[1][1], 'человек')
 # итоговый вывод суммы
 print('Итого размер населения','-', my_popul[0][1]+my_popul[1][1]+my_popul[2][1], 'человек')
+
+# Хорошо!
+# Можно сделать ещё так
+town_population = [
+    ['Москва', 17000000], 
+    ['Санкт-Петербург', 5400000], 
+    ['Сочи', 500000], 
+    ['Владивосток', 600000]
+]
+
+
+# Решение 1 через функцию с циклом for 
+def total_sum(lst):
+    num_lst = []
+    
+    for i in lst:
+        population = i[1]
+        num_lst.append(population)
+    
+    sum_lst = sum(num_lst)
+    
+    return sum_lst
+
+population_sum_1 = total_sum(town_population)
+
+
+# Решение 2 с суммой результатов индексации
+population_sum_2 = town_population[0][1] +  town_population[1][1] + town_population[2][1] + town_population[3][1]
