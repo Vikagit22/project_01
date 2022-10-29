@@ -46,3 +46,10 @@ print('Три случайно выбранные песни звучат', a+b+
 # сумма минут всех песен c округлением до четного, по правилам Python
 print('Три случайно выбранные песни звучат', round(a+b+c,0) ,'минут')
 
+# ой! Есть способ попроще
+time = 0
+for song in sample(tuple(my_favorite_songs), 3):
+    print(song)
+    time += my_favorite_songs[song]
+
+print(f'Три песни звучат {round(time, 2)}')
