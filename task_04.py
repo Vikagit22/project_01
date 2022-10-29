@@ -26,3 +26,12 @@ c = random.choice(my_favorite_songs)
 print('Три выбранные песни звучат', a[1]+b[1]+c[1],'минут')
 # сумма минут всех песен c округлением до четного, по правилам Python
 print('Три выбранные песни звучат', round(a[1]+b[1]+c[1],0) ,'минут')
+
+# Отлично. Можно и вот так
+# Решение 2
+time = 0
+for song in random.sample(my_favorite_songs, 3):
+    print(song[0])
+    time += song[1]
+
+print(f'Три песни звучат {round(time, 2)}')
